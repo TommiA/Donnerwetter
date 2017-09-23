@@ -1,35 +1,110 @@
 package com.serverbeer.pelkkatie.donnerwetter;
-import java.io.Serializable;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-
-//OpenWeatherMap root element
-@XmlRootElement(name="current")
-@XmlAccessorType(XmlAccessType.FIELD)
-public class WeatherTemperature implements Serializable {
+public class WeatherTemperature {
   private long id;
-  @XmlElement
-  private String temperature;
+  protected String value;
+  protected String unit;
+  protected String city;
+  protected String country;
+  protected long timefetched;
 
   public WeatherTemperature(){
     super();
   }
 
-  public WeatherTemperature(String temperature) {
-    super();
-    this.temperature = temperature;
-  }
+	/**
+	* Returns value of id
+	* @return
+	*/
+	public long getId() {
+		return id;
+	}
 
+	/**
+	* Sets new value of id
+	* @param
+	*/
+	public void setId(long id) {
+		this.id = id;
+	}
 
-  public void setTemperature(String temperature){
-    System.out.print("Temperature being set as "+temperature);
-      this.temperature = temperature;
-  }
+	/**
+	* Returns value of value
+	* @return
+	*/
+	public String getValue() {
+		return value;
+	}
 
-  public String getTemperature(){
-    return this.temperature;
-  }
+	/**
+	* Sets new value of value
+	* @param
+	*/
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	/**
+	* Returns value of unit
+	* @return
+	*/
+	public String getUnit() {
+		return unit;
+	}
+
+	/**
+	* Sets new value of unit
+	* @param
+	*/
+	public void setUnit(String unit) {
+		this.unit = unit;
+	}
+
+	/**
+	* Returns value of city
+	* @return
+	*/
+	public String getCity() {
+		return city;
+	}
+
+	/**
+	* Sets new value of city
+	* @param
+	*/
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	/**
+	* Returns value of country
+	* @return
+	*/
+	public String getCountry() {
+		return country;
+	}
+
+	/**
+	* Sets new value of country
+	* @param
+	*/
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	/**
+	* Returns value of timefetched
+	* @return
+	*/
+	public long getTimefetched() {
+		return timefetched;
+	}
+
+	/**
+	* Sets new value of timefetched
+	* @param
+	*/
+	public void setTimefetched(long timefetched) {
+		this.timefetched = timefetched;
+	}
 }
