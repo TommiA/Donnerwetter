@@ -8,16 +8,18 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
+
 @RestController
 @EnableAutoConfiguration
 @RequestMapping("/")
 public class DonnerwetterController {
 
     @RequestMapping(method=RequestMethod.GET, produces = "application/json")
-    WeatherTemperature home(@RequestParam(value="city", required=false) String city,
-                            @RequestParam(value="country", required=false) String country) {
+    WeatherTemperature getWeatherTemperature(@RequestParam(value="city", required=false) String city,
+                            @RequestParam(value="country", required=false) String country) throws Exception {
         DonnerwetterDataFetcher ddf = new DonnerwetterDataFetcher();
-        return ddf.fetchWeatherDataForLocation(city, "Finland");
+        WeatherTemperature respWeatherTemperature = ddf.fetchWeatherDataForLocation(city, country);
+        return respWeatherTemperature;
     }
 
     public static void main(String[] args) throws Exception {

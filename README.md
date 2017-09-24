@@ -52,8 +52,5 @@ Date: Sun, 24 Sep 2017 08:43:22 GMT
 
 {"value":"11","unit":"celcius","city":"Oulu","country":"FI","dateTimeUpdated":"2017-09-24T08:20:00"}
 ```  
-
-TODO as of 24.09.2017  
-- Unit tests
 ## Frontend
 TODO
