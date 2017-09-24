@@ -16,33 +16,43 @@ The backend support only HTTP GET method and provides the temperature informatio
 
 ### To build
 Just to build runnable java jar use  
+
 `$ mvn package`  
-to produce jar into the target folder. Approriate server infrastructure is included.
+
+to produce jar into the target folder. The appropriate server infrastructure is included.
 ### To run
 To run see execute  
+
 `$ jar tvf target/[filename].jar`  
+
 To both build and run use  
+
 `$ mvn spring-boot:run`
 ### To use
 #### URL pattern supported
 Provided that the backend starts as supposed and it is available at [http://localhost:8080] the following URL pattern is available  
 `http://localhost:8080?city={city name}&contry={country name}`  
-In where  
-`{city name}` and `{country name}` are the city and country for the location for the temperature query.  
+
+In where `{city name}` and `{country name}` are the city and country for the location for the temperature query.  
+
 E.g.  
 `http://localhost:8080?city=Oulu&contry=FI`  
+
 The backend defaults to the nearest city understood by the OpenWeatherMap provider or to Oulu Finland if left empty.
 #### Testing with curl or browser
 Provided that the backend starts as supposed and it is available at [http://localhost:8080] direct your browser to the URL or
 use curl. E.g.  
-`$curl -i localhost:8080
+```
+$curl -i localhost:8080
 
 HTTP/1.1 200
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
 Date: Sun, 24 Sep 2017 08:43:22 GMT
 
-{"value":"11","unit":"celcius","city":"Oulu","country":"FI","dateTimeUpdated":"2017-09-24T08:20:00"}`  
+{"value":"11","unit":"celcius","city":"Oulu","country":"FI","dateTimeUpdated":"2017-09-24T08:20:00"}
+```  
+
 TODO as of 24.09.2017  
 - Unit tests
 ## Frontend
