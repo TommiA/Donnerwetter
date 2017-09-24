@@ -1,25 +1,23 @@
 package com.serverbeer.pelkkatie.donnerwetter;
+
+import java.util.HashMap;
+import java.util.Map;
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
-
-import org.springframework.http.ResponseEntity;
-import java.util.Map;
-import java.util.HashMap;
-
 @RestController
 @EnableAutoConfiguration
 @RequestMapping("/")
 public class DonnerwetterController {
 
-    //---documentation of the method below
     @RequestMapping(method=RequestMethod.GET, produces = "application/json")
-    WeatherTemperature home(@RequestParam(value="loc", required=false) String loc) {
-        //return "Hello World! from "+loc+ " - Donner";
+    WeatherTemperature home(@RequestParam(value="city", required=false) String city,
+                            @RequestParam(value="country", required=false) String country) {
         DonnerwetterDataFetcher ddf = new DonnerwetterDataFetcher();
-        return ddf.fetchWeatherDataForLocation("Oulu", "Finland");
+        return ddf.fetchWeatherDataForLocation(city, "Finland");
     }
 
     public static void main(String[] args) throws Exception {

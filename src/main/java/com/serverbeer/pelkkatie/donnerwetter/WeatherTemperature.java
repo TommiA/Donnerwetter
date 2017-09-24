@@ -1,32 +1,15 @@
 package com.serverbeer.pelkkatie.donnerwetter;
 
 public class WeatherTemperature {
-  private long id;
   protected String value;
   protected String unit;
   protected String city;
   protected String country;
-  protected long timefetched;
+  protected String dateTimeUpdated;
 
   public WeatherTemperature(){
     super();
   }
-
-	/**
-	* Returns value of id
-	* @return
-	*/
-	public long getId() {
-		return id;
-	}
-
-	/**
-	* Sets new value of id
-	* @param
-	*/
-	public void setId(long id) {
-		this.id = id;
-	}
 
 	/**
 	* Returns value of value
@@ -96,15 +79,15 @@ public class WeatherTemperature {
 	* Returns value of timefetched
 	* @return
 	*/
-	public long getTimefetched() {
-		return timefetched;
+	public String getDateTimeUpdated() {
+		return dateTimeUpdated;
 	}
 
 	/**
 	* Sets new value of timefetched
 	* @param
 	*/
-	public void setTimefetched(long timefetched) {
-		this.timefetched = timefetched;
+	public void setDateTimeUpdated(String dateTimeUpdated) {
+		this.dateTimeUpdated = dateTimeUpdated;
 	}
 }
