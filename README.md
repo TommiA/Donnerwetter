@@ -31,18 +31,18 @@ To both build and run use
 ### To use
 #### URL pattern supported
 Provided that the backend starts as supposed and it is available at [http://localhost:8080] the following URL pattern is supported  
-`http://localhost:8080?city={city name}&contry={country name}`  
+`http://localhost:8080?city={city name}&country={country name}`  
 
 In where `{city name}` and `{country name}` are the city and country for the location for the temperature query.  
 
 E.g.  
-`http://localhost:8080?city=Oulu&contry=FI`  
+`http://localhost:8080?city=Oulu&country=FI`  
 
 The backend defaults to the nearest city understood by the OpenWeatherMap data provider or to Oulu Finland if left empty. The U.S. states are recognized by their
 abbreviation or full name, e.g.
 
 E.g.  
-`http://localhost:8080?city=Nashua&contry=NH`  
+`http://localhost:8080?city=Nashua&country=NH`  
 #### Testing with curl or browser
 Provided that the backend starts as supposed and it is available at [http://localhost:8080] direct your browser to the URL or
 use curl. E.g.  

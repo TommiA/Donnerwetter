@@ -3,16 +3,15 @@ package com.serverbeer.pelkkatie.donnerwetter;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.boot.test.web.client.TestRestTemplate;
-import static org.assertj.core.api.Assertions.*;
-
 import org.springframework.boot.test.autoconfigure.json.*;
 import org.springframework.boot.test.context.*;
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.json.*;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.test.context.junit4.SpringRunner;
+import static org.assertj.core.api.Assertions.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes={DonnerwetterController.class}, webEnvironment=WebEnvironment.RANDOM_PORT)
