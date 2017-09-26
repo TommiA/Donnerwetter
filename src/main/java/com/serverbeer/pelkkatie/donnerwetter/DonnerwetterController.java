@@ -17,6 +17,7 @@ public class DonnerwetterController {
 
     private DonnerwetterDataFetcher ddf;
 
+    @CrossOrigin
     @RequestMapping(method=RequestMethod.GET, produces = "application/json")
     WeatherTemperature getWeatherTemperature(@RequestParam(value="city", required=false) String city,
                             @RequestParam(value="country", required=false) String country) throws Exception {

@@ -28,10 +28,8 @@ public WeatherTemperature fetchWeatherDataForLocation(String city, String countr
   //Simple input value sanitation
   //OpenWeatherMap does location matching to the closest city if params provided
   WeatherTemperature rWT = null;
-  if (city==null){
+  if (city==null || city.isEmpty() || country==null || country.isEmpty()){
     city = "Oulu";
-  }
-  if (country==null){
     country = "FI";
   }
 
